@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Greg Dalton: Snek</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+	<div id="game-outer-wrap">
+		<div id="game-inner-wrap">
+
+			<div id="game-logo">
+				<img src="img/snek.png" />
+			</div>
+
+			<img id="game-controls" src="img/controls.png" />
+
+			<div id="game-scoreboard">
+				<table>
+					<tr id="game-scoreboard-current">
+						<td>SCORE</td>
+						<td id="game-score"></td>
+					</tr>
+					<tr id="game-scoreboard-high">
+						<td>HIGH SCORE</td>
+						<td id="game-high-score"></td>
+					</tr>
+				</table>
+				<div id="game-scoreboard-buttons">
+					<button id="game-btn-clear-high-score" class="game-button">Clear High Score</button>
+					<button id="game-btn-reset" class="game-button">Reset Game</button>
+					<button id="game-btn-forfeit" class="game-button">Forfeit</button>
+				</div>
+			</div>
+
+			<div id="game-menu" class="show">
+				<div id="game-menu-message"></div>
+				<div>
+					<button id="game-btn-play" class="game-button">PLAY</button>
+				</div>
+
+				<div id="game-settings">
+					<div>Size</div>
+					<div class="button-row">
+						<div><button class="game-button size-btn" size="small">Small</button></div>
+						<div><button class="game-button size-btn" size="medium">Medium</button></div>
+						<div><button class="game-button size-btn" size="large">Large</button></div>
+					</div>
+					<div>Difficulty</div>
+					<div class="button-row">
+						<div><button class="game-button difficulty-btn" difficulty="easy">Easy</button></div>
+						<div><button class="game-button difficulty-btn" difficulty="medium">Tough</button></div>
+						<div><button class="game-button difficulty-btn" difficulty="hard">Extreme</button></div>
+					</div>
+				</div>
+
+			</div>
+
+			<canvas id="game-canvas"></canvas>
+
+			<div id="game-author">Created by <a href="https://www.gregoryland.com">Gregory Dalton</a></div>
+		</div>
+	</div>
+
+	<!-- SOUND ID's WILL BE THE ID's AFTER "game-sfx-" !-->
+	<audio id="game-sfx-lose" src="sfx/failure.mp3"></audio>
+	<audio id="game-sfx-appear" src="sfx/snd_apple_appears.mp3"></audio>
+	<audio id="game-sfx-eat" src="sfx/snd_eat_apple.mp3"></audio>
+
+	<!-- GLOBAL NAMESPACE "SQ" -->
+	<script src="js/SQ.js"></script>
+
+	<script src="js/Cell.js"></script>
+	<script src="js/Food.js"></script>
+	<script src="js/Game.js"></script>
+	<script src="js/GameLoop.js"></script>
+	<script src="js/Grid.js"></script>
+	<script src="js/Scoreboard.js"></script>
+	<script src="js/Snake.js"></script>
+	<script src="js/Vector2.js"></script>
+</body>
+
+</html>

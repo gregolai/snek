@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Baloo', cursive;
+}
+
+#game-outer-wrap {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: #bebec6;
+
+	user-select: none;
+	cursor: default;
+}
+
+#game-inner-wrap {
+	position: relative;
+	display: flex; /* shrink to canvas dimensions */
+	justify-content: center;
+	align-items: center;
+
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+	background: white;
+}
+
+/* SNEK title */
+#game-logo {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+/* Keyboard controls to the left of the canvas */
+#game-controls {
+	position: absolute;
+	right: 100%;
+	top: 0;
+	padding: 16px 16px 0 0;
+	opacity: 0.4;
+}
+
+/* Canvas. Mimic "walls" with a css border. */
+#game-canvas {
+	border: 2px solid #555050;
+}
+
+/* Me */
+#game-author {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.game-button {
+	border: none;
+	background: #c20000;
+	color: white;
+	padding: 4px 16px;
+	cursor: pointer;
+	outline: none;
+	font-size: 16px;
+	font-family: 'Baloo', cursive;
+	transition: 0.2s border linear;
+}
+.game-button:hover {
+	background: #ce3e3e;
+}
+.game-button.active {
+	box-shadow: 0px 0px 8px white;
+	background: #e90000;
+}

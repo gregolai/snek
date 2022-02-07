@@ -1,0 +1,41 @@
+#game-menu {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	padding: 16px;
+	text-align: center;
+	background: #a59f9f;
+	border: 2px solid #555050;
+
+	opacity: 1;
+	transition: 0.3s opacity linear;
+}
+#game-inner-wrap.playing #game-menu {
+	opacity: 0;
+	pointer-events: none; /* Enable click-through when hidden. */
+}
+
+/* Menu message. Prevent padding from showing before first playthrough. */
+#game-menu-message {
+	color: white;
+	display: none;
+}
+#game-inner-wrap.playagain #game-menu-message {
+	display: block;
+	padding-bottom: 16px;
+}
+
+#game-settings {
+	margin-top: 16px;
+}
+#game-settings .button-row {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 8px;
+}
+#game-settings .button-row > div {
+	flex: 1;
+	text-align: center;
+}
